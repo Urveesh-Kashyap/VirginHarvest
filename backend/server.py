@@ -931,7 +931,7 @@ async def seed():
             await db.users.update_one({"email": email}, {"$set": update})
 
     # write test credentials
-    creds = Path("/app/memory/test_credentials.md")
+    creds = ROOT_DIR / "memory" / "test_credentials.md"
     creds.parent.mkdir(parents=True, exist_ok=True)
     creds.write_text(
         "# Virgin Harvest Test Credentials\n\n"
