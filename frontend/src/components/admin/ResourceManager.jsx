@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "sonner";
 import { Plus, Pencil, Trash2, X } from "lucide-react";
@@ -13,9 +13,16 @@ export default function ResourceManager({ title, endpoint, fields, columns, defa
   const [form, setForm] = useState({});
   const [saving, setSaving] = useState(false);
 
-  const load = () => api.get(`/admin/${endpoint}`).then((r) => setItems(r.data)).catch(() => {});
-  useEffect(() => { load(); /* eslint-disable-next-line */ }, [endpoint]);
+  const load = useCallback(() => {
+    return api
+      .get(`/admin/${endpoint}`)
+      .then((r) => setItems(r.data))
+      .catch(() => {});
+  }, [endpoint]);
 
+  useEffect(() => {
+    load();
+  }, [load]);
   const openCreate = () => { setEditing(null); setForm({ ...defaultItem }); setOpen(true); };
   const openEdit = (item) => { setEditing(item); setForm({ ...item }); setOpen(true); };
 
