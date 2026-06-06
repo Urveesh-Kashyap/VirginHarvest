@@ -1,0 +1,116 @@
+{
+  "theme": "dark",
+  "archetype": "5",
+  "archetype_name": "Luxury",
+  "brand_name": "Virgin Harvest Pvt. Ltd.",
+  "tagline": "Tradition in Every Drop",
+  "colors": {
+    "background": {
+      "base": "#0A0B0A",
+      "surface": "#121412",
+      "glass": "rgba(255, 255, 255, 0.03)"
+    },
+    "primary": {
+      "DEFAULT": "#DDA73B",
+      "hover": "#F0B94A",
+      "foreground": "#0A0B0A"
+    },
+    "secondary": {
+      "DEFAULT": "#1A3626",
+      "hover": "#234732",
+      "foreground": "#FAF9F6"
+    },
+    "text": {
+      "primary": "#FAF9F6",
+      "muted": "#9CA3AF",
+      "inverse": "#0A0B0A"
+    },
+    "border": {
+      "subtle": "rgba(250, 249, 246, 0.1)",
+      "focus": "#DDA73B"
+    }
+  },
+  "typography": {
+    "font_family": {
+      "heading": "'Poppins', sans-serif",
+      "body": "'Poppins', sans-serif"
+    },
+    "scales": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-none",
+      "h2": "text-3xl md:text-4xl lg:text-5xl font-regular tracking-tight",
+      "h3": "text-2xl md:text-3xl font-regular",
+      "body": "text-base lg:text-lg font-light leading-relaxed",
+      "overline": "text-xs md:text-sm uppercase tracking-[0.2em] font-medium text-primary",
+      "caption": "text-sm text-muted"
+    }
+  },
+  "spacing": {
+    "section": "py-24 md:py-32 lg:py-48",
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "element_gap": "gap-8 md:gap-12 lg:gap-16",
+    "card_padding": "p-8 md:p-12"
+  },
+  "surface_strategies": {
+    "marketing_cards": "bg-glass backdrop-blur-2xl border border-white/10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)]",
+    "hero_overlay": "bg-gradient-to-b from-black/20 via-black/40 to-[#0A0B0A]",
+    "admin_dashboard": "bg-[#121412] border border-white/5 rounded-xl",
+    "floating_actions": "bg-glass backdrop-blur-xl border border-white/20 rounded-full shadow-lg"
+  },
+  "layout": {
+    "bento_grid": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-8",
+    "admin_grid": "grid grid-cols-1 lg:grid-cols-4 gap-6",
+    "max_width": "max-w-[1600px] mx-auto"
+  },
+  "components": {
+    "button": {
+      "primary": "bg-primary text-background px-8 py-4 rounded-none font-medium hover:bg-primary-hover transition-colors duration-300",
+      "outline": "bg-transparent border border-primary text-primary px-8 py-4 rounded-none font-medium hover:bg-primary/10 transition-colors duration-300",
+      "ghost": "bg-transparent text-text-primary px-6 py-3 hover:text-primary transition-colors duration-300"
+    },
+    "floating_actions": "fixed bottom-8 right-8 flex flex-col gap-4 z-50",
+    "input": "bg-transparent border-b border-white/20 px-0 py-3 text-text-primary focus:outline-none focus:border-primary transition-colors duration-300 rounded-none w-full"
+  },
+  "motion": {
+    "scroll_reveal": "opacity-0 translate-y-8 transition-all duration-1000 ease-out",
+    "hover_lift": "hover:-translate-y-2 transition-transform duration-500 ease-out",
+    "bottle_float": "animate-float"
+  },
+  "libraries": {
+    "animations": ["framer-motion", "lenis"],
+    "icons": "@phosphor-icons/react",
+    "ui": "shadcn/ui"
+  },
+  "media": {
+    "logos": {
+      "brand": "https://customer-assets.emergentagent.com/job_0875d049-6e15-4764-b4b0-462206d8f86a/artifacts/kvwlwyfi_Virgin%20Harvest%20logo%20design.png"
+    },
+    "hero": {
+      "background": "https://images.unsplash.com/photo-1647512363100-5670a45a05b6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwyfHxtdXN0YXJkJTIwZmllbGQlMjBkYXJrJTIwbW9vZHl8ZW58MHx8fHwxNzgwNzI5ODk1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Dark moody mustard field for storytelling background"
+    },
+    "product": {
+      "bottle_mockup": "https://images.unsplash.com/photo-1775664876019-57b40b77a30b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxwcmVtaXVtJTIwZ2xhc3MlMjBvaWwlMjBib3R0bGUlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3ODA3Mjk4OTV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Premium glass bottle on dark background to represent the oil"
+    },
+    "storytelling": {
+      "process": "https://images.pexels.com/photos/36169162/pexels-photo-36169162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Luxury food preparation context showing the end use of premium oil"
+    }
+  },
+  "accessibility": {
+    "contrast_strategy": "Ensure text over images has sufficient shadow or gradient overlay. Floating actions must have aria-labels.",
+    "testing_attributes": "Add data-testid to all interactive elements."
+  },
+  "instructions_to_main_agent": [
+    "Build a cinematic Apple-style landing page with a dark luxury theme (#0A0B0A).",
+    "Use Lenis for smooth scrolling and Framer Motion for scroll-triggered reveal animations.",
+    "Implement a sticky 'crystal glass' header that blurs the background.",
+    "The hero section should have the bottle floating (animate-float) over a dark moody mustard field.",
+    "Implement scroll-storytelling sections: 'Harvest Origin', 'Cold-Pressed Process', 'Purity'.",
+    "Provide a floating action group on the bottom right (WhatsApp, Instagram, Call) using Phosphor Icons.",
+    "Build standard multi-step checkout and auth pages matching the luxury brand vibe (no standard generic borders, use subtle bottom borders for inputs).",
+    "Build an Admin Dashboard utilizing a dense grid with subtle 1px white/5 borders and no heavy drop shadows.",
+    "Ensure 'Poppins' font is loaded. Use wide-tracking uppercase for overlines, and large light-weight for H1s.",
+    "Do NOT use placeholder images. Use the provided media URLs exclusively."
+  ]
+}
